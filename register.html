@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація - ЗНО200</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                <a href="index.html">ЗНО200</a>
+            </div>
+            <div class="nav-links">
+                <a href="about.html" class="animate__animated animate__fadeIn">Про нас</a>
+                <a href="courses.html" class="animate__animated animate__fadeIn">Курси</a>
+                <a href="contacts.html" class="animate__animated animate__fadeIn">Контакти</a>
+                <button class="auth-btn animate__animated animate__fadeIn">Увійти</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="registration-page">
+        <div class="registration-container animate__animated animate__fadeIn">
+            <div class="registration-content">
+                <div class="registration-left">
+                    <h1 class="animate__animated animate__fadeInLeft">Приєднуйтесь до нас</h1>
+                    <p class="animate__animated animate__fadeInLeft animate__delay-1s">
+                        Почніть свій шлях до успішного складання ЗНО разом з найкращими викладачами
+                    </p>
+                    <div class="features-list animate__animated animate__fadeInLeft animate__delay-2s">
+                        <div class="feature-item">
+                            <i class="feature-icon">📚</i>
+                            <span>Доступ до всіх матеріалів курсу</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="feature-icon">👥</i>
+                            <span>Індивідуальний підхід</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="feature-icon">📊</i>
+                            <span>Відстеження прогресу</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration-right animate__animated animate__fadeInRight">
+                    <div class="registration-form-container">
+                        <h2>Створити акаунт</h2>
+                        <form class="registration-form" onsubmit="FormController.handleRegistration(event)">
+                            <div class="form-group">
+                                <label for="name">Ім'я та прізвище</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    class="animate__animated animate__fadeInUp"
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    class="animate__animated animate__fadeInUp animate__delay-1s"
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    pattern="\+380\d{9}"
+                                    placeholder="+380XXXXXXXXX"
+                                    required 
+                                    class="animate__animated animate__fadeInUp animate__delay-2s"
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Оберіть курс</label>
+                                <select 
+                                    id="course" 
+                                    name="course" 
+                                    required 
+                                    class="animate__animated animate__fadeInUp animate__delay-3s"
+                                >
+                                    <option value="">Виберіть курс</option>
+                                    <option value="math">Математика</option>
+                                    <option value="ukrainian">Українська мова та література</option>
+                                    <option value="english">Англійська мова</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Пароль</label>
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    required 
+                                    class="animate__animated animate__fadeInUp animate__delay-4s"
+                                >
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="submit-btn animate__animated animate__fadeInUp animate__delay-5s"
+                            >
+                                Зареєструватися
+                            </button>
+                        </form>
+                        <div class="form-footer animate__animated animate__fadeInUp animate__delay-5s">
+                            <p>Вже маєте акаунт? <a href="login.html" class="login-link">Увійти</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">Політика конфіденційності</a>
+                <a href="terms.html">Умови використання</a>
+            </div>
+            <p>&copy; 2024 ЗНО200. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+</body>
+</html> 

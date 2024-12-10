@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - ЗНО200</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                <a href="index.html">ЗНО200</a>
+            </div>
+            <div class="nav-links">
+                <div class="main-links">
+                    <a href="about.html" class="animate__animated animate__fadeIn">Про нас</a>
+                    <a href="courses.html" class="animate__animated animate__fadeIn">Курси</a>
+                    <a href="contacts.html" class="active animate__animated animate__fadeIn">Контакти</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="auth-btn animate__animated animate__fadeIn" onclick="window.location.href='login.html'">Увійти</button>
+                    <button class="register-btn animate__animated animate__fadeIn" onclick="window.location.href='register.html'">Реєстрація</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contacts-page">
+        <section class="contact-hero animate__animated animate__fadeIn">
+            <div class="hero-content">
+                <h1>Зв'яжіться з нами</h1>
+                <p>Ми завжди раді допомогти вам!</p>
+                <div class="hero-buttons">
+                    <a href="tel:+380XXXXXXXXX" class="contact-btn phone-btn">
+                        <i class="fas fa-phone-alt"></i> Зателефонувати
+                    </a>
+                    <a href="mailto:info@zno200.com" class="contact-btn email-btn">
+                        <i class="fas fa-envelope"></i> Написати email
+                    </a>
+                </div>
+            </div>
+            <div class="contact-illustration animate__animated animate__fadeInRight">
+                <!-- Можна додати SVG ілюстрацію або зображення -->
+            </div>
+        </section>
+
+        <section class="contact-info-section">
+            <div class="contact-cards-container">
+                <div class="contact-card animate__animated animate__fadeInUp">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Наша адреса</h3>
+                    <p>м. Київ, вул. Прикладна, 123</p>
+                    <p>Офіс 45</p>
+                    <a href="https://maps.google.com" target="_blank" class="map-link">
+                        Відкрити на карті <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="contact-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Графік роботи</h3>
+                    <div class="schedule">
+                        <div class="schedule-item">
+                            <span>Пн-Пт:</span>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Сб:</span>
+                            <span>10:00 - 15:00</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span>Нд:</span>
+                            <span>Вихідний</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-btn telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section animate__animated animate__fadeIn">
+            <div class="form-container">
+                <h2>Напишіть нам</h2>
+                <form class="contact-form" onsubmit="FormController.handleContactForm(event)">
+                    <div class="form-group animate__animated animate__fadeInUp">
+                        <label for="name">Ім'я</label>
+                        <input type="text" id="name" name="name" required 
+                               class="interactive-input">
+                    </div>
+                    <div class="form-group animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required 
+                               class="interactive-input">
+                    </div>
+                    <div class="form-group animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <label for="subject">Тема</label>
+                        <select id="subject" name="subject" required class="interactive-input">
+                            <option value="">Оберіть тему</option>
+                            <option value="question">Загальне питання</option>
+                            <option value="courses">Питання про курси</option>
+                            <option value="cooperation">Співпраця</option>
+                            <option value="other">Інше</option>
+                        </select>
+                    </div>
+                    <div class="form-group animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                        <label for="message">Повідомлення</label>
+                        <textarea id="message" name="message" required 
+                                  class="interactive-input" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn pulse-btn animate__animated animate__fadeInUp">
+                        <span>Надіслати</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">Політика конфіденційності</a>
+                <a href="terms.html">Умови використання</a>
+            </div>
+            <p>&copy; 2024 ЗНО200. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+</body>
+</html> 

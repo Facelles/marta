@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курси - ЗНО200</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                <a href="index.html">ЗНО200</a>
+            </div>
+            <div class="nav-links">
+                <div class="main-links">
+                    <a href="about.html" class="animate__animated animate__fadeIn">Про нас</a>
+                    <a href="courses.html" class="active animate__animated animate__fadeIn">Курси</a>
+                    <a href="contacts.html" class="animate__animated animate__fadeIn">Контакти</a>
+                </div>
+                <div class="auth-buttons">
+                    <button class="auth-btn animate__animated animate__fadeIn" onclick="window.location.href='login.html'">Увійти</button>
+                    <button class="register-btn animate__animated animate__fadeIn" onclick="window.location.href='register.html'">Реєстрація</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="courses-page">
+        <section class="courses-hero animate__animated animate__fadeIn">
+            <h1>Наші курси</h1>
+            <p>Обери свій шлях до успіху</p>
+            
+            <div class="courses-filter animate__animated animate__fadeInUp">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i> Всі курси
+                </button>
+                <button class="filter-btn" data-filter="math">
+                    <i class="fas fa-calculator"></i> Математика
+                </button>
+                <button class="filter-btn" data-filter="ukrainian">
+                    <i class="fas fa-book"></i> Українська мова
+                </button>
+                <button class="filter-btn" data-filter="english">
+                    <i class="fas fa-language"></i> Англійська мова
+                </button>
+            </div>
+        </section>
+
+        <section class="courses-grid">
+            <div class="course-card animate__animated animate__fadeInUp" data-category="math">
+                <div class="course-image">
+                    <img src="photo/math.jpg" alt="Математика">
+                    <div class="course-overlay">
+                        <span class="course-level">Базовий рівень</span>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <h3>Математика</h3>
+                    <p>Підготовка до ЗНО з математики</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-clock"></i> 6 місяців</li>
+                        <li><i class="fas fa-video"></i> 48 занять</li>
+                        <li><i class="fas fa-tasks"></i> 200+ завдань</li>
+                    </ul>
+                    <button class="enroll-btn" onclick="alert('Це демонстраційний сайт, створений в навчальних цілях.')">
+                        Записатись на курс
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="course-card animate__animated animate__fadeInUp" data-category="ukrainian">
+                <div class="course-image">
+                    <img src="photo/ukr.jpg" alt="Українська мова">
+                    <div class="course-overlay">
+                        <span class="course-level">Базовий рівень</span>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <h3>Українська мова</h3>
+                    <p>Підготовка до ЗНО з української мови</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-clock"></i> 6 місяців</li>
+                        <li><i class="fas fa-video"></i> 48 занять</li>
+                        <li><i class="fas fa-tasks"></i> 180+ завдань</li>
+                    </ul>
+                    <button class="enroll-btn" onclick="alert('Це демонстраційний сайт, створений в навчальних цілях.')">
+                        Записатись на курс
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="course-card animate__animated animate__fadeInUp" data-category="english">
+                <div class="course-image">
+                    <img src="photo/eng.jpg" alt="Англійська мова">
+                    <div class="course-overlay">
+                        <span class="course-level">Базовий рівень</span>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <h3>Англійська мова</h3>
+                    <p>Підготовка до ЗНО з англійської мови</p>
+                    <ul class="course-features">
+                        <li><i class="fas fa-clock"></i> 6 місяців</li>
+                        <li><i class="fas fa-video"></i> 48 занять</li>
+                        <li><i class="fas fa-tasks"></i> 150+ завдань</li>
+                    </ul>
+                    <button class="enroll-btn" onclick="alert('Це демонстраційний сайт, створений в навчальних цілях.')">
+                        Записатись на курс
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-features">
+            <h2>Переваги наших курсів</h2>
+            <div class="features-grid">
+                <div class="feature-item animate__animated animate__fadeInUp">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Досвідчені викладачі</h3>
+                    <p>Навчайтеся у кращих спеціалістів з багаторічним досвідом</p>
+                </div>
+                <!-- Інші переваги -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="privacy.html">Політика конфіденційності</a>
+                <a href="terms.html">Умови використання</a>
+            </div>
+            <p>&copy; 2024 ЗНО200. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html> 
