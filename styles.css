@@ -345,13 +345,27 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 2rem 5%;
+    text-align: center;
 }
 
 .feature-card {
-    padding: 1.5rem;
+    padding: 2rem;
     background: var(--white);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.feature-card p {
+    color: #4b5563;
 }
 
 #contacts {
@@ -647,7 +661,7 @@ button:disabled {
     transform: scale(1.05);
 }
 
-/* Адаптивність */
+/* Адативність */
 @media (max-width: 768px) {
     .course-card {
         flex: 0 0 calc(100% - 2rem);
@@ -1028,36 +1042,44 @@ button:disabled {
 }
 
 .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .stat-item {
-    text-align: center;
-    padding: 1.5rem;
     background: white;
+    padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.stat-item:hover {
-    transform: translateY(-5px);
+    text-align: center;
+    min-width: 200px;
 }
 
 .stat-number {
     display: block;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: bold;
     color: #6366f1;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     color: #4b5563;
-    font-size: 0.9rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 /* Стилі для секції команди */
@@ -1471,7 +1493,7 @@ button:disabled {
     }
 }
 
-/* Додаємо анімацію підсвічування при наведенні */
+/* Додаємо анімацію підсвічування при наведені */
 .auth-btn:hover, .register-btn:hover {
     animation: glow 1.5s infinite;
 }
@@ -1488,7 +1510,7 @@ button:disabled {
         text-align: center;
     }
 
-    /* Змінюємо анімації для мобільної версії */
+    /* Змінюмо анімації для мобільної версії */
     .auth-btn {
         animation: slideInTop 0.5s ease-out;
     }
@@ -1768,4 +1790,80 @@ button:disabled {
     height: 200px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #6366f1;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.stat-item {
+    flex: 1;
+    max-width: 300px;
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #6366f1;
+    margin-bottom: 1rem;
+}
+
+.stat-label {
+    color: #4b5563;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 4rem 2rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .stat-item {
+        width: 100%;
+        max-width: 280px;
+    }
 }

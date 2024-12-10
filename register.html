@@ -6,6 +6,7 @@
     <title>Реєстрація - ЗНО200</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -14,10 +15,15 @@
                 <a href="index.html">ЗНО200</a>
             </div>
             <div class="nav-links">
-                <a href="about.html" class="animate__animated animate__fadeIn">Про нас</a>
-                <a href="courses.html" class="animate__animated animate__fadeIn">Курси</a>
-                <a href="contacts.html" class="animate__animated animate__fadeIn">Контакти</a>
-                <button class="auth-btn animate__animated animate__fadeIn">Увійти</button>
+                <div class="main-links">
+                    <a href="about.html" class="animate__animated animate__fadeIn">Про нас</a>
+                    <a href="courses.html" class="animate__animated animate__fadeIn">Курси</a>
+                    <a href="contacts.html" class="animate__animated animate__fadeIn">Контакти</a>
+                </div>
+            </div>
+            <div class="auth-buttons">
+                <button class="auth-btn animate__animated animate__fadeIn" onclick="window.location.href='login.html'">Увійти</button>
+                <button class="register-btn animate__animated animate__fadeIn" onclick="window.location.href='register.html'">Реєстрація</button>
             </div>
         </nav>
     </header>
